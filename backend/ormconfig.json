@@ -1,0 +1,14 @@
+{
+  "type": "postgres",
+  "host": "localhost",
+  "port": 5432,
+  "username": "postgres",
+  "password": "mikael",
+  "database": "ds2_atv02_db",
+  "synchronize": true,
+  "logging": ["error"],
+  "entities": ["dist/entity/*.js"],
+  "cli": {
+    "entitiesDir": "dist/entity"
+  }
+}

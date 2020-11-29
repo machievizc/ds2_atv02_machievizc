@@ -1,0 +1,19 @@
+<p>
+    <mat-toolbar color="primary">
+        <mat-toolbar-row>
+            <span class="example-spacer"></span>
+            <button mat-icon-button class="example-icon" [matMenuTriggerFor]="menu"
+                aria-label="Example icon-button with menu icon">
+                <mat-icon>menu</mat-icon>
+            </button>
+            <span>{{path | titlecase}}</span>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item [routerLink]="['/faculdades']">Faculdades</button>
+                <button mat-menu-item [routerLink]="['/turmas']">Turmas</button>
+                <button mat-menu-item [routerLink]="['/cursos']">Cursos</button>
+                <button mat-menu-item [routerLink]="['/usuarios']">Usuários</button>
+                <button mat-menu-item (click)="logout()">Logout</button>
+            </mat-menu>
+        </mat-toolbar-row>
+    </mat-toolbar>
+</p>

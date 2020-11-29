@@ -1,0 +1,21 @@
+<div fxLayout="row" fxLayoutAlign="center center">
+    <mat-card fxLayout="column" fxFlex="20" style="margin-top: 10%;">
+        <h2>Login</h2>
+        <form [formGroup]="loginForm" fxLayout="column">
+            <mat-form-field appearance="legacy">
+                <mat-label>Usuário</mat-label>
+                <input matInput formControlName="user">
+            </mat-form-field>
+            <mat-form-field appearance="legacy">
+                <mat-label>Password</mat-label>
+                <input matInput formControlName="password">
+            </mat-form-field>
+            <p *ngIf="error" style="color: red;">
+                {{error}}
+            </p>
+        </form>
+        <div>
+            <button mat-raised-button color="primary" (click)="login()">Login</button>
+        </div>
+    </mat-card>
+</div>
